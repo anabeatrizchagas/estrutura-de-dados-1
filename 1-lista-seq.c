@@ -25,22 +25,22 @@ typedef struct
 
 // declarando as funcoes 
 
-void inicializarLista(LISTA_SEQ *l); //ok
-void imprimirLista(LISTA_SEQ *l); //ok
-void destruirLista(LISTA_SEQ *l); //ok
-void ordenarLista(LISTA_SEQ *l); // ok
+void inicializarLista(LISTA_SEQ *l);
+void imprimirLista(LISTA_SEQ *l);
+void destruirLista(LISTA_SEQ *l);
+void ordenarLista(LISTA_SEQ *l);
 
-int tamLista(LISTA_SEQ *l); //ok
-int chavePrimeiroElem(LISTA_SEQ *l); //ok
-int chaveUltimoElem(LISTA_SEQ *l); //ok
-int chaveEnesimoElem(LISTA_SEQ *l, int n); //ok
-int indiceAntecessor(LISTA_SEQ *l, int ch); //ok
-int buscaSeq(LISTA_SEQ *l, int ch); // ok
-int buscaBin(LISTA_SEQ *l, int ch); // ok
+int tamLista(LISTA_SEQ *l);
+int chavePrimeiroElem(LISTA_SEQ *l);
+int chaveUltimoElem(LISTA_SEQ *l);
+int chaveEnesimoElem(LISTA_SEQ *l, int n);
+int indiceAntecessor(LISTA_SEQ *l, int ch);
+int buscaSeq(LISTA_SEQ *l, int ch);
+int buscaBin(LISTA_SEQ *l, int ch);
 
-bool inserirNoFim(LISTA_SEQ *l, int ch); //ok
-bool inserirNoIndice(LISTA_SEQ *l, int i, int ch); //ok
-bool inserirOrdenado(LISTA_SEQ *l, int ch); //ok
+bool inserirNoFim(LISTA_SEQ *l, int ch);
+bool inserirNoIndice(LISTA_SEQ *l, int i, int ch);
+bool inserirOrdenado(LISTA_SEQ *l, int ch);
 
 // implementando funcoes 
 
