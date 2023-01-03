@@ -33,6 +33,9 @@ void devolverNo(LISTA_LIG_EST *l, int i);
 
 int buscaSeq(LISTA_LIG_EST *l, int ch, int *ant);
 int obterNo(LISTA_LIG_EST *l);
+int tam(LISTA_LIG_EST *l);
+int chavePrimeiroElem(LISTA_LIG_EST *l); // primeiro em ordem logica;
+int chaveUltimoElem(LISTA_LIG_EST *l); // ultimo em ordem logica
 
 bool exclucaoDeChave(LISTA_LIG_EST *l, int ch);
 bool insercaoOrdSemRep(LISTA_LIG_EST *l, int ch);
@@ -167,6 +170,60 @@ bool insercaoOrdSemRep(LISTA_LIG_EST *l, int ch)
    }
 
     return (true);
+
+}
+
+int tam(LISTA_LIG_EST *l)
+{
+    int cont, aux;
+
+    cont = 0;
+    aux = l->inicio;
+    
+    if(l->inicio != -1)
+    {
+        while(aux != -1)
+        {
+            aux = l->V[aux].prox;
+            cont++;
+
+        }
+
+    }
+
+    return (cont);
+
+}
+
+int chavePrimeiroElem(LISTA_LIG_EST *l)
+{
+    if(l->inicio == -1) 
+    {
+        return (-1); // lista vazia
+
+    } else {
+
+        return (l->V[l->inicio].chave); // primeiro elem
+
+    } 
+
+}
+
+int chaveUltimoElem(LISTA_LIG_EST *l)
+{
+    int aux = l->inicio;
+
+    if(l->inicio == -1) 
+    {
+        return (-1); // lista vazia
+
+    } else { // lista com elementos
+
+        while(l->V[aux].prox != -1) aux = l->V[aux].prox;
+
+        return (l->V[aux].chave);
+
+    }
 
 }
 
