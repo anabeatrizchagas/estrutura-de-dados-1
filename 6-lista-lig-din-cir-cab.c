@@ -22,18 +22,18 @@ typedef struct
 
 // declarando funcoes
 
-void inicializarLista(LISTA_CIRC_COM_CABECA *l); // ok
-void exibirLista(LISTA_CIRC_COM_CABECA *l); // ok
+void inicializarLista(LISTA_CIRC_COM_CABECA *l);
+void exibirLista(LISTA_CIRC_COM_CABECA *l);
 
 int tam(LISTA_CIRC_COM_CABECA *l);
 
-NO* retornaPrimeiroElem(LISTA_CIRC_COM_CABECA *l); // ok
-NO* retornaEnesimoElem(LISTA_CIRC_COM_CABECA *l, int n); // ok
-NO* retornaUltimoElem(LISTA_CIRC_COM_CABECA *l); // ok
-NO* buscaSeqOrd(LISTA_CIRC_COM_CABECA *l, int ch, NO** ant); // ok
+NO* retornaPrimeiroElem(LISTA_CIRC_COM_CABECA *l);
+NO* retornaEnesimoElem(LISTA_CIRC_COM_CABECA *l, int n);
+NO* retornaUltimoElem(LISTA_CIRC_COM_CABECA *l);
+NO* buscaSeqOrd(LISTA_CIRC_COM_CABECA *l, int ch, NO** ant);
 
-bool insercaoOrdSemRep(LISTA_CIRC_COM_CABECA *l, int ch); // ok
-bool exclusaoDeCh(LISTA_CIRC_COM_CABECA *l, int ch); // ok
+bool insercaoOrdSemRep(LISTA_CIRC_COM_CABECA *l, int ch);
+bool exclusaoDeCh(LISTA_CIRC_COM_CABECA *l, int ch);
 bool destruirLista(LISTA_CIRC_COM_CABECA *l);
 
 // implementando funcoes
