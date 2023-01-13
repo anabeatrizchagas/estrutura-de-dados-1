@@ -23,12 +23,12 @@ typedef struct
 
 // declarando funcoes
 
-void inicializacao(FILA_DINAMICA *f); // ok
-void inserir(FILA_DINAMICA *f, int ch); // ok
-void exibir(FILA_DINAMICA *f); // ok
+void inicializacao(FILA_DINAMICA *f);
+void inserir(FILA_DINAMICA *f, int ch);
+void exibir(FILA_DINAMICA *f);
 
-int tamanho(FILA_DINAMICA *f); // ok
-int retirar(FILA_DINAMICA *f); // ok
+int tamanho(FILA_DINAMICA *f);
+int retirar(FILA_DINAMICA *f);
 
 // implementando funcoes
 
