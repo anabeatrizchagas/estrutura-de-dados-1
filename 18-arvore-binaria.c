@@ -23,7 +23,7 @@ void inicializacao(NO** raiz);
 void imprimirPreOrdem(NO* raiz);
 void imprimirPosOrdem(NO* raiz);
 void imprimirEmOrdem(NO* raiz);
-void retornaPai(NO* raiz, int ch, NO** pai); // ch garantidamente existente
+void retornaPai(NO* raiz, int ch, NO** pai); // para ch garantidamente existente
 void qtdNosFolhas(NO* raiz, int* qtd);
 void qtdNos(NO* raiz, int* qtd);
 void qtdNosComUmFilho(NO* raiz, int* qtd);
