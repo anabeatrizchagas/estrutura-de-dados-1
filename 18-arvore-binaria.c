@@ -30,12 +30,14 @@ void qtdNosComUmFilho(NO* raiz, int* qtd);
 void somaChDosNos(NO* raiz, int* soma);
 void qtdNosChavesPares(NO* raiz, int* qtd);
 void qtdNosMaioresQueCh(NO* raiz, int ch, int* qtd); // com chave maior que ch
-void alturaArvore(NO* raiz, int* alturaEsq, int* alturaDir, int* alturaFinal);
+void medirAltura(NO* raiz, int* alturaEsq, int* alturaDir, int* alturaFinal);
 void buscaChave(NO* raiz, int ch, NO** resp);
 void menorNo(NO* raiz, NO** menor); // no com menor chave
 void nivelCh(NO* raiz, int ch, NO** donoDeCh, int* nivel);
 void imprimirPararentisado(NO* raiz);
 void imprimirIdentado(NO* raiz, int n); // n e o nivel
+
+int alturaArvore(NO* raiz);
 
 bool destruirArvore(NO** raiz);
 bool arvoreVazia(NO* raiz);
@@ -197,21 +199,22 @@ void qtdNosFolhas(NO* raiz, int* qtd)
 
 }
 
-void alturaArvore(NO* raiz, int* alturaEsq, int* alturaDir, int* alturaFinal)
+void medirAltura(NO* raiz, int* alturaEsq, int* alturaDir, int* alturaFinal)
 {
     if(raiz != NULL)
     {
+
         if(raiz->esq != NULL)
         {
             *alturaEsq = *alturaEsq + 1;
-            alturaArvore(raiz->esq, alturaEsq, alturaDir, alturaFinal);
+            medirAltura(raiz->esq, alturaEsq, alturaDir, alturaFinal);
 
         }
 
         if(raiz->dir != NULL)
         {
             *alturaDir = *alturaDir + 1;
-            alturaArvore(raiz->dir, alturaEsq, alturaDir, alturaFinal);
+            medirAltura(raiz->dir, alturaEsq, alturaDir, alturaFinal);
         
         }
 
@@ -220,6 +223,26 @@ void alturaArvore(NO* raiz, int* alturaEsq, int* alturaDir, int* alturaFinal)
 
     }
 
+}
+
+int alturaArvore(NO* raiz)
+{
+    if(raiz != NULL && raiz->esq == NULL && raiz->dir == NULL) 
+    {
+        return 1;
+    
+    } else {
+
+        int hEsq, hDir, hFinal;
+        hEsq = 0;
+        hDir = 0;
+        hFinal = 0;
+
+        medirAltura(raiz, &hEsq, &hDir, &hFinal);
+        return (hFinal);
+
+    }
+    
 }
 
 void qtdNos(NO* raiz, int* qtd)
